@@ -1,42 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, ButtonProps } from 'react-native';
+import { StatusBar } from 'react-native';
+
+import { Background } from './src/components/Background';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>
-        Hello React Native!
-      </Text>
-
-      <Button title="Send 1" />
-      <Button title="Send 2" />
-      <Button title="Send 3" />
-      <Button title="Hello world!" />
-
-      <StatusBar style="auto" />
-    </View>
+    <Background>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      
+    </Background>
   );
 }
-
-interface ButtonProps {
-  title: string;
-}
-
-function Button(props: ButtonProps) {
-  return (
-    <TouchableOpacity>
-      <Text>
-        {props.title}
-      </Text>
-    </TouchableOpacity>
-  )
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
