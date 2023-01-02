@@ -1,2 +1,2 @@
 # nlw_esports
-Projeto feito durante NLW eSports
+Projeto feito durante NLW esportes da Rockseat. 
